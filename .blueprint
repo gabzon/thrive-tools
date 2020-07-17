@@ -1,0 +1,145 @@
+created:
+    - database/migrations/2020_07_05_174735_create_attitudes_table.php
+    - database/migrations/2020_07_05_174736_create_guides_table.php
+    - database/migrations/2020_07_05_174737_create_industries_table.php
+    - database/migrations/2020_07_05_174738_create_phases_table.php
+    - database/migrations/2020_07_05_174739_create_taxonomies_table.php
+    - database/migrations/2020_07_05_174740_create_resources_table.php
+    - database/migrations/2020_07_05_174741_create_sources_table.php
+    - database/migrations/2020_07_05_174742_create_files_table.php
+    - database/migrations/2020_07_05_174743_create_videos_table.php
+    - database/migrations/2020_07_05_174744_create_tools_table.php
+    - database/migrations/2020_07_05_174745_create_questions_table.php
+    - database/migrations/2020_07_05_174745_create_attitude_tool_table.php
+    - database/migrations/2020_07_05_174745_create_industry_tool_table.php
+    - database/migrations/2020_07_05_174745_create_phase_question_table.php
+    - database/migrations/2020_07_05_174745_create_resource_tool_table.php
+    - database/migrations/2020_07_05_174745_create_source_tool_table.php
+    - database/migrations/2020_07_05_174745_create_taxonomy_tool_table.php
+    - database/migrations/2020_07_05_174745_create_question_tool_table.php
+    - database/migrations/2020_07_05_174745_create_question_taxonomy_table.php
+    - app/Attitude.php
+    - app/Guide.php
+    - app/Industry.php
+    - app/Phase.php
+    - app/Taxonomy.php
+    - app/Resource.php
+    - app/Source.php
+    - app/File.php
+    - app/Video.php
+    - app/Tool.php
+    - app/Question.php
+    - database/factories/AttitudeFactory.php
+    - database/factories/GuideFactory.php
+    - database/factories/IndustryFactory.php
+    - database/factories/PhaseFactory.php
+    - database/factories/TaxonomyFactory.php
+    - database/factories/ResourceFactory.php
+    - database/factories/SourceFactory.php
+    - database/factories/FileFactory.php
+    - database/factories/VideoFactory.php
+    - database/factories/ToolFactory.php
+    - database/factories/QuestionFactory.php
+    - app/Http/Controllers/AttitudeController.php
+    - app/Http/Controllers/GuideController.php
+    - app/Http/Controllers/ToolController.php
+    - app/Http/Controllers/IndustryController.php
+    - app/Http/Controllers/PhaseController.php
+    - app/Http/Controllers/TaxonomyController.php
+    - app/Http/Controllers/ResourceController.php
+    - app/Http/Controllers/SourceController.php
+    - app/Http/Controllers/FileController.php
+    - app/Http/Controllers/VideoController.php
+    - app/Http/Controllers/QuestionController.php
+    - app/Http/Requests/AttitudeStoreRequest.php
+    - app/Http/Requests/AttitudeUpdateRequest.php
+    - app/Http/Requests/GuideStoreRequest.php
+    - app/Http/Requests/GuideUpdateRequest.php
+    - app/Http/Requests/ToolStoreRequest.php
+    - app/Http/Requests/ToolUpdateRequest.php
+    - app/Http/Requests/IndustryStoreRequest.php
+    - app/Http/Requests/IndustryUpdateRequest.php
+    - app/Http/Requests/PhaseStoreRequest.php
+    - app/Http/Requests/PhaseUpdateRequest.php
+    - app/Http/Requests/TaxonomyStoreRequest.php
+    - app/Http/Requests/TaxonomyUpdateRequest.php
+    - app/Http/Requests/ResourceStoreRequest.php
+    - app/Http/Requests/ResourceUpdateRequest.php
+    - app/Http/Requests/SourceStoreRequest.php
+    - app/Http/Requests/SourceUpdateRequest.php
+    - app/Http/Requests/FileStoreRequest.php
+    - app/Http/Requests/FileUpdateRequest.php
+    - app/Http/Requests/VideoStoreRequest.php
+    - app/Http/Requests/VideoUpdateRequest.php
+    - app/Http/Requests/QuestionStoreRequest.php
+    - app/Http/Requests/QuestionUpdateRequest.php
+    - resources/views/attitude/index.blade.php
+    - resources/views/attitude/create.blade.php
+    - resources/views/attitude/show.blade.php
+    - resources/views/attitude/edit.blade.php
+    - resources/views/guide/index.blade.php
+    - resources/views/guide/create.blade.php
+    - resources/views/guide/show.blade.php
+    - resources/views/guide/edit.blade.php
+    - resources/views/tool/index.blade.php
+    - resources/views/tool/create.blade.php
+    - resources/views/tool/show.blade.php
+    - resources/views/tool/edit.blade.php
+    - resources/views/industry/index.blade.php
+    - resources/views/industry/create.blade.php
+    - resources/views/industry/show.blade.php
+    - resources/views/industry/edit.blade.php
+    - resources/views/phase/index.blade.php
+    - resources/views/phase/create.blade.php
+    - resources/views/phase/show.blade.php
+    - resources/views/phase/edit.blade.php
+    - resources/views/taxonomy/index.blade.php
+    - resources/views/taxonomy/create.blade.php
+    - resources/views/taxonomy/show.blade.php
+    - resources/views/taxonomy/edit.blade.php
+    - resources/views/resource/index.blade.php
+    - resources/views/resource/create.blade.php
+    - resources/views/resource/show.blade.php
+    - resources/views/resource/edit.blade.php
+    - resources/views/source/index.blade.php
+    - resources/views/source/create.blade.php
+    - resources/views/source/show.blade.php
+    - resources/views/source/edit.blade.php
+    - resources/views/file/index.blade.php
+    - resources/views/file/create.blade.php
+    - resources/views/file/show.blade.php
+    - resources/views/file/edit.blade.php
+    - resources/views/video/index.blade.php
+    - resources/views/video/create.blade.php
+    - resources/views/video/show.blade.php
+    - resources/views/video/edit.blade.php
+    - resources/views/question/index.blade.php
+    - resources/views/question/create.blade.php
+    - resources/views/question/show.blade.php
+    - resources/views/question/edit.blade.php
+    - tests/Feature/Http/Controllers/AttitudeControllerTest.php
+    - tests/Feature/Http/Controllers/GuideControllerTest.php
+    - tests/Feature/Http/Controllers/ToolControllerTest.php
+    - tests/Feature/Http/Controllers/IndustryControllerTest.php
+    - tests/Feature/Http/Controllers/PhaseControllerTest.php
+    - tests/Feature/Http/Controllers/TaxonomyControllerTest.php
+    - tests/Feature/Http/Controllers/ResourceControllerTest.php
+    - tests/Feature/Http/Controllers/SourceControllerTest.php
+    - tests/Feature/Http/Controllers/FileControllerTest.php
+    - tests/Feature/Http/Controllers/VideoControllerTest.php
+    - tests/Feature/Http/Controllers/QuestionControllerTest.php
+updated:
+    - routes/web.php
+models:
+    User: {  }
+    Attitude: { name: 'string:100', slug: 'string nullable', description: 'text nullable', icon: 'string nullable', color: 'string nullable', relationships: { belongsToMany: Tool } }
+    Guide: { name: 'string:100', slug: string, description: 'text nullable', icon: 'string nullable', image: 'string nullable', user_id: 'id foreign' }
+    Industry: { name: 'string:100', slug: 'string nullable', description: 'text nullable', icon: 'string nullable', image: 'string nullable', sector: 'enum:primary,secondary,tertiary,public default:''tertiary''', relationships: { belongsToMany: Tool } }
+    Phase: { name: 'string:100', slug: string, description: 'text nullable', icon: 'string nullable', image: 'string nullable', color: 'string:20', relationships: { belongsToMany: Question } }
+    Taxonomy: { name: 'string:100', slug: 'string nullable', description: 'text nullable', icon: 'string nullable', image: 'string nullable' }
+    Resource: { name: 'string:100', slug: 'string nullable', description: 'text nullable', icon: 'string nullable', image: 'string nullable', affiliate_url: 'string nullable', relationships: { belongsTo: User, belongsToMany: Tool } }
+    Source: { type: 'enum:book,chapter,article,newspaper,website,conference,none default:''none''', author: 'string nullable', title: 'string nullable', location: 'string nullable', publisher: 'string nullable', year: 'integer nullable', isbn10: 'string nullable', isbn13: 'string nullable', url: 'string nullable', chapter_title: 'string nullable', pages: 'string nullable', affiliate_link: 'string nullable', image: 'string nullable', visited_on: 'date nullable', number: 'integer nullable', volume: 'string nullable', edition: 'string nullable', relationships: { belongsToMany: Tool, belongsTo: User } }
+    File: { name: 'string:200 nullable', version: 'string:10 nullable', author: 'string:100 nullable', type: 'enum:pdf,example,kit default:''pdf''', lang: 'enum:en,fr,es,pt,it,hr,de,ja,nl,cn,rs default:''en''', file: string, relationships: { belongsTo: User } }
+    Video: { url: string, relationships: { belongsTo: 'Tool, User' } }
+    Tool: { name: 'string:100', slug: 'string nullable', tagline: 'string nullable', participants: 'string nullable', icon: 'string nullable', image: 'string nullable', image_file: 'string nullable', excerpt: 'text nullable', description: 'longtext nullable', tips: 'text nullable', duration: 'integer nullable', duration_unit: 'enum,seconds,minutes,hour,hours,day,days,week,weeks nullable', user_id: 'id foreign', softdeletes: softDeletes, relationships: { belongsToMany: 'Attitude, Resource, Source, Taxonomy', hasMany: 'File, Video' } }
+    Question: { question: string, description: 'text nullable', softdeletes: softDeletes, relationships: { belongsToMany: 'Tool, Taxonomy, Phase' } }

@@ -1,0 +1,153 @@
+models:
+  Attitude:
+    name: string:100
+    slug: string nullable
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+    relationships:
+      belongsToMany: Tool
+  
+  Guide:
+    name: string:100
+    slug: string
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+    user_id: id foreign
+
+  Industry:
+    name: string:100
+    slug: string nullable
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+    sector: enum:primary,secondary,tertiary,public default:'tertiary'
+    relationships:
+      belongsToMany: Tool
+
+  Phase:
+    name: string:100
+    slug: string
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+    color: string:20
+    relationships:
+      belongsToMany: Question
+  
+  Taxonomy:
+    name: string:100
+    slug: string nullable
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+  
+  Resource:
+    name: string:100
+    slug: string nullable
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+    affiliate_url: string nullable
+    relationships:
+      belongsTo: User
+      belongsToMany: Tool
+  
+  Source:
+    type: enum:book,chapter,article,newspaper,website,conference,none default:'none'
+    author: string nullable
+    title: string nullable
+    location: string nullable
+    publisher: string nullable
+    year: integer nullable
+    isbn10: string nullable
+    isbn13: string nullable
+    url: string nullable
+    chapter_title: string nullable
+    pages: string nullable
+    affiliate_link: string nullable
+    image: string nullable
+    visited_on: date nullable
+    number: integer nullable
+    volume: string nullable
+    edition: string nullable
+    relationships:
+      belongsToMany: Tool
+      belongsTo: User
+
+  File:
+    name: string:100 nullable
+    version: string:10 nullable
+    author: string:100 nullable
+    type: enum:pdf,example,kit default:'pdf' 
+    lang: enum:en,fr,es,pt,it,hr,de,ja,nl,cn,rs default:'en'
+    file: string
+    image_file: string nullable
+    relationships:
+      belongsTo: User
+
+  Video:
+    url: string
+    title: string nullable
+    relationships:
+      belongsTo: Tool, User      
+
+  Tool:
+    name: string:100
+    slug: string nullable
+    tagline: string nullable
+    participants: string nullable
+    icon: string nullable
+    image: string nullable    
+    excerpt: text nullable
+    description: longtext nullable
+    tips: text nullable
+    duration: integer nullable
+    duration_unit: enum,seconds,minutes,hour,hours,day,days,week,weeks nullable
+    user_id: id foreign
+    softDeletes
+    relationships:
+      belongsToMany: Attitude, Resource, Source, Taxonomy
+      hasMany: File, Video      
+
+  Question:
+    question: string
+    description: text nullable
+    softDeletes
+    relationships:
+      belongsToMany: Tool, Taxonomy, Phase
+
+controllers:
+  Attitude:
+    resource
+  
+  Guide:
+    resource
+  
+  Tool:
+    resource
+
+  Industry:
+    resource
+
+  Phase:
+    resource
+
+  Taxonomy:
+    resource
+
+  Resource:
+    resource
+
+  Source:
+    resource
+
+  File:
+    resource
+
+  Video:
+    resource
+  
+  Question:
+    resource
