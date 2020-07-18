@@ -13,171 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/detail/{tool}', 'WelcomeController@show')->name('detail');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('attitude', 'AttitudeController');
+Route::middleware(['auth'])->group(function(){
+    Route::resource('attitude', 'AttitudeController');
+    Route::resource('guide', 'GuideController');
+    Route::resource('tool', 'ToolController');
+    Route::resource('industry', 'IndustryController');
+    Route::resource('phase', 'PhaseController');
+    Route::resource('taxonomy', 'TaxonomyController');
+    Route::resource('resource', 'ResourceController');
+    Route::resource('source', 'SourceController');
+    Route::resource('file', 'FileController');
+    Route::resource('video', 'VideoController');
+    Route::resource('question', 'QuestionController');
+});
 
-Route::resource('guide', 'GuideController');
 
-Route::resource('tool', 'ToolController');
 
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');
-
-
-
-Route::resource('attitude', 'AttitudeController');
-
-Route::resource('guide', 'GuideController');
-
-Route::resource('tool', 'ToolController');
-
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');
-
-
-Route::resource('attitude', 'AttitudeController');
-
-Route::resource('guide', 'GuideController');
-
-Route::resource('tool', 'ToolController');
-
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');
-
-
-Route::resource('attitude', 'AttitudeController');
-
-Route::resource('guide', 'GuideController');
-
-Route::resource('tool', 'ToolController');
-
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');
-
-
-Route::resource('attitude', 'AttitudeController');
-
-Route::resource('guide', 'GuideController');
-
-Route::resource('tool', 'ToolController');
-
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');
-
-
-Route::resource('attitude', 'AttitudeController');
-
-Route::resource('guide', 'GuideController');
-
-Route::resource('tool', 'ToolController');
-
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');
-
-
-Route::resource('attitude', 'AttitudeController');
-
-Route::resource('guide', 'GuideController');
-
-Route::resource('tool', 'ToolController');
-
-Route::resource('industry', 'IndustryController');
-
-Route::resource('phase', 'PhaseController');
-
-Route::resource('taxonomy', 'TaxonomyController');
-
-Route::resource('resource', 'ResourceController');
-
-Route::resource('source', 'SourceController');
-
-Route::resource('file', 'FileController');
-
-Route::resource('video', 'VideoController');
-
-Route::resource('question', 'QuestionController');

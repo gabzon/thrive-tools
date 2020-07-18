@@ -6,6 +6,7 @@ use App\Http\Requests\ToolStoreRequest;
 use App\Http\Requests\ToolUpdateRequest;
 use App\Tool;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ToolController extends Controller
@@ -125,6 +126,7 @@ class ToolController extends Controller
      */
     public function destroy(Request $request, Tool $tool)
     {
+        Storage::delete($tool->image);
         $tool->delete();
 
         return redirect()->route('tool.index');

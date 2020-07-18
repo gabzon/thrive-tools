@@ -4,11 +4,13 @@ return [
     'name' => 'Blueprint',
     'slug' => 'blueprint',
     'description' => 'A visual tool that lets you represent in chronological order the execution of your operations and services',
-    'tips' => '
-    * - Create a blueprint to evaluate your process (time-cost)
-    * - Create a blueprint to evaluate posible socia/human conflicts
-    * - Create a blueprint to evaluate the environmental impact
-    * - Create the blueprint of your competitors
+    'tips' => ' 
+    <ul class="list-disc pl-5">
+        <li>Create a blueprint to evaluate your process (time-cost)</li>
+        <li>Create a blueprint to evaluate posible socia/human conflicts</li>
+        <li>Create a blueprint to evaluate the environmental impact</li> 
+        <li>Create the blueprint of your competitors</li>
+    </ul>
     ',
     'duration' => '1',
     'duration_unit' => 'hour', // seconds,minutes,hours,days,weeks
@@ -33,6 +35,10 @@ return [
 ];
 
 
+
+
+
+  
 
 
 

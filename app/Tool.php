@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use League\CommonMark\CommonMarkConverter;
 
 class Tool extends Model
 {
@@ -145,5 +146,11 @@ class Tool extends Model
     public function hasPhase($id)
     {
         return in_array($id, $this->phases->pluck('id')->toArray());
+    }
+
+    public function tipsToHTML()
+    {
+        $converter = new CommonMarkConverter();
+        echo $converter->convertToHtml($this->tips);
     }
 }

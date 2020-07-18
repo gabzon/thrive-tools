@@ -35,26 +35,13 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="bg-indigo-100">
         @include('layouts.navbar')
-        @guest
+
         <main class="py-4">
             @yield('content')
         </main>
-        @else
-        <div class="min-h-screen md:flex">
-            <div class="flex-none pt-12 inset-0 fixed hidden w-40 md:block md:w-64 bg-indigo-200 text-indigo-800">
-                <nav class="p-5">
-                    @include('layouts.navigation')
-                </nav>
-            </div>
-            <div class="flex-1 bg-indigo-100 ml-64 mt-10">
-                <main class="px-8">
-                    @yield('content')
-                </main>
-            </div>
-        </div>
-        @endguest
+
 
     </div>
     @include('layouts.footer')

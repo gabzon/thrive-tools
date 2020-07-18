@@ -26,6 +26,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/blueprint.png',
              ]);
          }
  
@@ -34,15 +35,16 @@ class ToolSeeder extends Seeder
          if ( !$bmc ) {
              $tool = require_once database_path('data/tools/bmc.php');
              Tool::create([
-                 'name' => $tool['name'],
-                 'slug' => $tool['slug'],
-                 'description' => $tool['description'],
-                 'tips' => $tool['tips'],
-                 'duration' => $tool['duration'],
-                 'duration_unit' => $tool['duration_unit'], 
+                 'name'         => $tool['name'],
+                 'slug'         => $tool['slug'],
+                 'description'  => $tool['description'],
+                 'tips'         => $tool['tips'],
+                 'duration'     => $tool['duration'],
+                 'duration_unit'=> $tool['duration_unit'], 
                  'participants' => $tool['participants'],            
-                 'icon' => $tool['icon'],         
-                 'user_id' => 1,
+                 'icon'         => $tool['icon'],         
+                 'user_id'      => 1,
+                 'image'        => 'tools/bmc.png',
              ]);
          }
  
@@ -51,15 +53,16 @@ class ToolSeeder extends Seeder
          if ( !$compass ) {            
              $tool = require_once database_path('data/tools/compass.php');
              Tool::create([
-                 'name' => $tool['name'],
-                 'slug' => $tool['slug'],
-                 'description' => $tool['description'],
-                 'tips' => $tool['tips'],
-                 'duration' => $tool['duration'],
-                 'duration_unit' => $tool['duration_unit'], 
+                 'name'         => $tool['name'],
+                 'slug'         => $tool['slug'],
+                 'description'  => $tool['description'],
+                 'tips'         => $tool['tips'],
+                 'duration'     => $tool['duration'],
+                 'duration_unit'=> $tool['duration_unit'], 
                  'participants' => $tool['participants'],
-                 'icon' => $tool['icon'],          
-                 'user_id' => 1,
+                 'icon'         => $tool['icon'],          
+                 'user_id'      => 1,
+                 'image'        => 'tools/compass.png',
              ]);
          }
  
@@ -78,6 +81,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/decision-making.png',
              ]);
          }
  
@@ -96,6 +100,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/empathy-map.png',
              ]);
          }
  
@@ -114,6 +119,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/insight-board.png',
              ]);
          }
  
@@ -132,6 +138,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/keynote.png',
              ]);
          }
  
@@ -151,6 +158,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/personas.png',
              ]);
          }
  
@@ -160,15 +168,16 @@ class ToolSeeder extends Seeder
          if ( !$puzzle ) {
              $tool = require_once database_path('data/tools/puzzle.php');            
              Tool::create([
-                 'name' => $tool['name'],
-                 'slug' => $tool['slug'],
-                 'description' => $tool['description'],
-                 'tips' => $tool['tips'],
-                 'duration' => $tool['duration'],
-                 'duration_unit' => $tool['duration_unit'], 
+                 'name'         => $tool['name'],
+                 'slug'         => $tool['slug'],
+                 'description'  => $tool['description'],
+                 'tips'         => $tool['tips'],
+                 'duration'     => $tool['duration'],
+                 'duration_unit'=> $tool['duration_unit'], 
                  'participants' => $tool['participants'],
-                 'icon' => $tool['icon'],          
-                 'user_id' => 1,
+                 'icon'         => $tool['icon'],          
+                 'user_id'      => 1,
+                 'image'        => 'tools/puzzle.png',
              ]);
          }
  
@@ -187,6 +196,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/blueprint.png',
              ]);
          }
  
@@ -205,6 +215,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/storytelling.png',
              ]);
          }
  
@@ -223,6 +234,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/swot.png',
              ]);
          }
  
@@ -241,6 +253,7 @@ class ToolSeeder extends Seeder
                  'participants' => $tool['participants'],
                  'icon' => $tool['icon'],          
                  'user_id' => 1,
+                 'image' => 'tools/teamwork.png',
              ]);
          }
  
@@ -250,15 +263,16 @@ class ToolSeeder extends Seeder
          if ( !$vcp ) {
              $tool = require_once database_path('data/tools/vcp.php');            
              Tool::create([
-                 'name' => $tool['name'],
-                 'slug' => $tool['slug'],
-                 'description' => $tool['description'],
-                 'tips' => $tool['tips'],
-                 'duration' => $tool['duration'],
-                 'duration_unit' => $tool['duration_unit'], 
+                 'name'         => $tool['name'],
+                 'slug'         => $tool['slug'],
+                 'description'  => $tool['description'],
+                 'tips'         => $tool['tips'],
+                 'duration'     => $tool['duration'],
+                 'duration_unit'=> $tool['duration_unit'], 
                  'participants' => $tool['participants'],
-                 'icon' => $tool['icon'],          
-                 'user_id' => 1,
+                 'icon'         => $tool['icon'],          
+                 'user_id'      => 1,
+                 'image'        => 'tools/vpc.png',
              ]);
          }
     }
