@@ -20,9 +20,9 @@ class Listing extends Component
 {
     use WithPagination;
 
-    public string $model;
-    public string $title = '';
-    public string $search = '';
+    public $model;
+    public $title = '';
+    public $search = '';
     public $perPage = 10;
     public $sortField;
     public bool $sortAsc = TRUE;
@@ -37,7 +37,7 @@ class Listing extends Component
         $this->sortField = $field;
     }
 
-    public function mount(string $model = 'attitude', $title = '')
+    public function mount($model = 'attitude', $title = '')
     {
         $this->model = $model;
         if ($title) {
