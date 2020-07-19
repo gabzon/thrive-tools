@@ -1,102 +1,131 @@
-<div class="bg-white shadow overflow-hidden sm:rounded-lg">
-    <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
-        <h3 class="text-lg leading-6 font-medium text-gray-900">
-            Relations
-        </h3>
-        <p class="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
-            tool details.
-        </p>
+@if ($tool->questions->count() > 0)
+<section id="questions" class="my-10">
+    <h3 class="font-bold text-2xl text-gray-700">Questions it helps to answer</h3>
+    <hr class="mb-2">
+    <ul class="list-disc pl-8">
+        @foreach ($tool->questions as $item)
+        <li>{{ $item->question }}</li>
+        @endforeach
+    </ul>
+
+</section>
+@endif
+
+@if ($tool->taxonomies->count() > 0)
+<section id="taxonomies" class="my-10">
+    <h3 class="font-bold text-2xl text-gray-700">Taxonomies</h3>
+    <hr class="mb-2">
+    @foreach ($tool->taxonomies as $tax)
+    <span
+        class="inline-block my-1 mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700 text-xs">{{ $tax->name }}</span>
+    @endforeach
+</section>
+@endif
+
+@if ($tool->attitudes->count() > 0)
+<section id="attitudes" class="my-10">
+    <h3 class="font-bold text-2xl text-gray-700">Attitudes</h3>
+    <hr class="mb-2">
+    @foreach ($tool->attitudes as $item)
+    <span
+        class="inline-block my-1 mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700 text-xs">{{ $item->name }}</span>
+    @endforeach
+</section>
+@endif
+
+@if ($tool->resources->count() > 0)
+<section id="resources" class="my-6">
+    <h3 class="font-bold text-2xl text-gray-700">Resources</h3>
+    <hr class="mb-2">
+    @foreach ($tool->resources as $item)
+    <span
+        class="inline-block my-1 mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700 text-xs">{{ $item->name }}</span>
+    @endforeach
+</section>
+@endif
+
+@if ($tool->sources->count() > 0)
+<section id="sources" class="my-6">
+    <h3 class="font-bold text-2xl text-gray-700">Sources</h3>
+    <hr class="mb-2">
+    <ul class="list-disc pl-8">
+        @foreach ($tool->sources as $item)
+        <li>
+            {{ $item->title }}, by {{ $item->author }} (source type: {{ $item->type }})
+        </li>
+        @endforeach
+    </ul>
+</section>
+@endif
+
+@if ($tool->industries->count() > 0)
+<section id="industries" class="my-6">
+    <h3 class="font-bold text-2xl text-gray-700">Industries</h3>
+    <hr class="mb-2">
+    @foreach ($tool->industries as $item)
+    <span class="inline-block my-1 mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->name }}</span>
+    @endforeach
+</section>
+@endif
+
+@if ($tool->guides->count() > 0)
+<section id="industries" class="my-6">
+    <h3 class="font-bold text-2xl text-gray-700">Guides</h3>
+    <hr class="mb-2">
+    <div class="grid grid-cols-3 gap-4">
+        @foreach ($tool->guides as $item)
+        <div class="max-w-sm rounded overflow-hidden shadow hover:shadow-lg">
+            <img class="w-full" src="{{ asset($tool->image)}}" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">{{ $item->name }}</div>
+                <p class="text-gray-700 text-base">
+                    {{ $item->description}}
+                </p>
+            </div>
+        </div>
+        @endforeach
     </div>
-    <div>
-        <dl>
-            <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Taxonomies
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->taxonomies as $tax)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $tax->name }}</span>
-                    @endforeach
-                </dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Attitudes
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->attitudes as $item)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->name }}</span>
-                    @endforeach
-                </dd>
-            </div>
+</section>
+@endif
 
-            <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Resources
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->resources as $item)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->name }}</span>
-                    @endforeach
-                </dd>
-            </div>
+@if ($tool->videos->count() > 0)
+<section id="videos" class="my-6">
+    <h3 class="font-bold text-2xl text-gray-700">Videos</h3>
+    <hr class="mb-2">
+    @foreach ($tool->videos as $item)
+    <span class="inline-block my-1 mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->title }}</span>
+    @endforeach
+</section>
+@endif
 
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Sources
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->sources as $item)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->title }}</span>
-                    @endforeach
-                </dd>
+@if ($tool->files->count() > 0)
+<section id="files" class="my-6">
+    <h3 class="font-bold text-2xl text-gray-700">Files</h3>
+    <hr class="mb-2">
+    <ul>
+        @foreach ($tool->files as $item)
+        <li>
+            <div class="grid grid-cols-5 gap-5">
+                <div>
+                    <a href="{{ route('file.show', $item)}}" class="">{{ $item->name }}</a>
+                </div>
+                <div>
+                    {{ $item->version }}
+                </div>
+                <div>
+                    {{ $item->type }}
+                </div>
+                <div>
+                    {{ $item->lang }}
+                </div>
+                <div>
+                    <a href="{{ asset($item->file) }}">Download</a>
+                </div>
             </div>
+        </li>
 
-            <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Industries
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->industries as $item)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->name }}</span>
-                    @endforeach
-                </dd>
-            </div>
+        @endforeach
+    </ul>
 
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Questions
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->questions as $item)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->question }}</span>
-                    @endforeach
-                </dd>
-            </div>
-
-            <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Videos
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    {{-- {{ $tool->videos }} --}}
-                    @foreach ($tool->videos as $item)
-                    <span class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700">{{ $item->title }}</span>
-                    @endforeach
-                </dd>
-            </div>
-
-            <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm leading-5 font-medium text-gray-500">
-                    Files
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                    @foreach ($tool->files as $item)
-                    <a href="{{ route('file.show', $item)}}"
-                        class="mx-1 px-2 py-1 rounded-full bg-indigo-200 text-indigo-700 hover:bg-indigo-700 hover:text-white">{{ $item->name }}</a>
-                    @endforeach
-                </dd>
-            </div>
-        </dl>
-    </div>
-</div>
+</section>
+@endif

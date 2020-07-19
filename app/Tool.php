@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use League\CommonMark\CommonMarkConverter;
+use Illuminate\Database\Eloquent\Builder;
 
 class Tool extends Model
 {
@@ -42,6 +43,10 @@ class Tool extends Model
         'user_id' => 'integer',
     ];
 
+    public function author()
+    {
+        return $this->belongsTo(\App\User::class, 'user_id');
+    }
 
     public function attitudes()
     {
@@ -103,11 +108,6 @@ class Tool extends Model
         return in_array($id, $this->videos->pluck('id')->toArray());
     }
 
-    public function author()
-    {
-        return $this->belongsTo(\App\User::class, 'user_id');
-    }
-
     public function industries()
     {
         return $this->belongsToMany(\App\Industry::class);
@@ -124,8 +124,8 @@ class Tool extends Model
     }
 
     public function hasQuestion($id)
-    {
-        return in_array($id, $this->industries->pluck('id')->toArray());
+    {        
+        return in_array($id, $this->questions->pluck('id')->toArray());
     }
 
     public function guides()
@@ -153,4 +153,24 @@ class Tool extends Model
         $converter = new CommonMarkConverter();
         echo $converter->convertToHtml($this->tips);
     }
-}
+
+    public function scopeTaxonomy($query, $tax)
+    {               
+        if(!Empty($tax)){            
+            return $query->whereHas('taxonomies', function (Builder $query_tax) use ($tax) {
+                $query_tax->where('id', $tax);
+            });
+        }
+        return $query;
+    }
+
+    public function scopePhase($query, $ph)
+    {               
+        if(!Empty($ph)){            
+            return $query->whereHas('phases', function (Builder $query_ph) use ($ph) {
+                $query_ph->where('id', $ph);
+            });
+        }
+        return $query;
+    }
+} 

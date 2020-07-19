@@ -1,6 +1,6 @@
 <div class="pt-4 pb-2">
     <div class="flex justify-between items-center mb-6">
-        <h1 class="capitalize text-3xl font-semibold text-gray-600">{{ $title ? $title : $model .'s' }}</h1>
+        <h1 class="capitalize text-4xl font-semibold text-gray-600">{{ $title ? $title : $model .'s' }}</h1>
 
         <a href="{{ route( $model . '.create')}}"
             class="bg-indigo-700 py-2 px-3 rounded text-white hover:bg-indigo-800">Add {{ $model }}</a>

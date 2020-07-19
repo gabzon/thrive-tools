@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\File;
 use App\Http\Requests\ToolStoreRequest;
 use App\Http\Requests\ToolUpdateRequest;
 use App\Tool;
@@ -51,7 +52,9 @@ class ToolController extends Controller
      */
     public function show(Request $request, Tool $tool)
     {
-        return view('tool.show', compact('tool'));
+        $download = File::where('tool_id', $tool->id)->whereNotIn('type',['example'])->latest('id')->first();
+        //dd($file);
+        return view('tool.show', compact('tool'))->with('download', $download);
     }
 
     /**
@@ -71,14 +74,15 @@ class ToolController extends Controller
      */
     public function update(ToolUpdateRequest $request, Tool $tool)
     {
+
+        //dd($request->all());
         
         $tool->update([
             'name'          => $request->name,
             'slug'          => Str::slug($request->name, '-'),
             'tagline'       => $request->tagline,
             'participants'  => $request->participants,
-            'icon'          => $request->icon,
-            'image'         => $request->image,            
+            'icon'          => $request->icon,                        
             'excerpt'       => $request->excerpt,
             'description'   => $request->description,
             'tips'          => $request->tips,
@@ -88,6 +92,14 @@ class ToolController extends Controller
 
         if ($request->hasFile('image')) {            
             $tool->update([ 'image' => $request->image->store('tools') ]);
+        }
+
+        if ($request->has('questions')) {
+            $tool->questions()->sync($request->questions);
+        }
+
+        if ($request->has('phases')) {
+            $tool->phases()->sync($request->phases);
         }
 
         if ($request->has('taxonomies')) {
@@ -106,17 +118,48 @@ class ToolController extends Controller
             $tool->sources()->sync($request->sources);
         }
 
-        if ($request->has('files')) {
-            $tool->files()->saveMany($request->files);
+        if ($request->has('guides')) {
+            $tool->guides()->sync($request->guides);            
+        }
+
+        if ($request->has('industries')) {
+            $tool->industries()->sync($request->industries);            
+        }
+        
+        if ($request->has('files')) {  
+            
+            foreach ($tool->files as $item) {                
+                $item->tool_id = null;
+                $item->save();                
+            }
+
+            $selectedFiles = [];                        
+            foreach ($request['files'] as $item) {
+                $f = \App\File::findOrFail($item);
+                $selectedFiles[] = $f;
+            }                      
+            
+            $tool->files()->saveMany($selectedFiles);
         }
 
         if ($request->has('videos')) {
-            $tool->videos()->saveMany($request->videos);            
+            
+            foreach ($tool->videos as $item) {                
+                $item->tool_id = null;
+                $item->save();                
+            }
+
+            $selectedVideos = [];
+            foreach ($request->videos as $item) {
+                $v = \App\Video::find($item);
+                $selectedVideos[] = $v;
+            }
+            $tool->videos()->saveMany($selectedVideos);            
         }
 
-        $request->session()->flash('success','Tool updated successfully');
+        session()->flash('success','Tool updated successfully');
 
-        return redirect()->route('tool.index');
+        return redirect(route('tool.index'));
     }
 
     /**

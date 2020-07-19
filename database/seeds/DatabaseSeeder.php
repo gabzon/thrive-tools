@@ -18,10 +18,12 @@ class DatabaseSeeder extends Seeder
             QuestionSeeder::class,
             ResourceSeeder::class,
             SourceSeeder::class,
+            PhaseSeeder::class,
             TaxonomySeeder::class,
             ToolSeeder::class,
             GuideSeeder::class,
-            VideoSeeder::class
+            VideoSeeder::class,
+            FileSeeder::class,
         ]);
     }
 }

@@ -14,8 +14,8 @@ class CreatePhaseQuestionTable extends Migration
     public function up()
     {
         Schema::create('phase_question', function (Blueprint $table) {
-            $table->foreignId('phase_id');
-            $table->foreignId('question_id');
+            $table->foreignId('phase_id')->constrained(); 
+            $table->foreignId('question_id')->constrained(); 
         });
     }
 

@@ -13,87 +13,102 @@ class AttitudeSeeder extends Seeder
     public function run()
     {
         Attitude::create([
-            'name' => 'analytical',
+            'name' => 'Analytical',
             'slug' => 'analytical',            
             'description' => 'relating to or using analysis or logical reasoning'
         ]);
+
         Attitude::create([
-            'name' => 'amused',
+            'name' => 'Amused',
             'slug' => 'amused',
             'description' => 'finding something funny or entertaining'
         ]);
+
         Attitude::create([
-            'name' => 'angry',
+            'name' => 'Angry',
             'slug' => 'angry',
             'description' => 'feeling or showing strong annoyance, displeasure, or hostility; full of anger'
         ]);
+
         Attitude::create([
-            'name' => 'apathetic',
+            'name' => 'Apathetic',
             'slug' => 'apathetic',
             'description' => 'showing or feeling no interest, enthusiasm, or concern'
         ]);
+
         Attitude::create([
-            'name' => 'appreciative',
+            'name' => 'Appreciative',
             'slug' => 'appreciative',
             'description' => 'feeling or showing gratitude or pleasure'
         ]);
+
         Attitude::create([
-            'name' => 'arrogant',
+            'name' => 'Arrogant',
             'slug' => 'arrogant',
             'description' => "having or revealing an exaggerated sense of one's own importance or abilities"
         ]);
+
         Attitude::create([
-            'name' => 'artificial',
+            'name' => 'Artificial',
             'slug' => 'artificial',
             'description' => '(of a person or their behaviour) insincere or affected'
         ]);
+        
         Attitude::create([
-            'name' => 'audacious',
+            'name' => 'Audacious',
             'slug' => 'audacious',
             'description' => 'showing a willingness to take surprisingly bold risks'
         ]);
+
         Attitude::create([
-            'name' => 'authoritative',
+            'name' => 'Authoritative',
             'slug' => 'authoritative',
             'description' => 'commanding and self-confident; likely to be respected and obeyed'
         ]);
+
         Attitude::create([
             'name' => 'awe',
             'slug' => 'awe',
             'description' => 'a feeling of reverential respect mixed with fear or wonder'
         ]);
+
         Attitude::create([
             'name' => 'bantering',
             'slug' => 'bantering',
             'description' => 'characterized by good-humoured teasing'
         ]);
+
         Attitude::create([
             'name' => 'benevolent',
             'slug' => 'benevolent',
             'description' => 'well meaning and kindly'
         ]);
+
         Attitude::create([
             'name' => 'brave',
             'slug' => 'brave',
             'description' => 'ready to face and endure danger or pain; showing courage'
         ]);
+        
         Attitude::create([
-            'name' => 'confident',
+            'name' => 'Confident',
             'slug' => 'confident',
             'description' => "feeling or showing confidence in oneself or one's abilities or qualities"
         ]);
+        
         Attitude::create([
             'name' => 'coherente',
             'slug' => 'coherente',
             'description' => '(of an argument, theory, or policy) logical and consistent'
         ]);
+        
         Attitude::create([
             'name' => 'calm',
             'slug' => 'calm',
             'description' => 'not showing or feeling nervousness, anger, or other strong emotions'
         ]);
         Attitude::create([
-            'name' => 'cooperative',
+            'name' => 'Cooperative',
             'slug' => 'cooperative',
             'description' => 'involving mutual assistance in working towards a common goal'
         ]);
@@ -107,75 +122,107 @@ class AttitudeSeeder extends Seeder
             'slug' => 'centered',
             'description' => '(of a person) well balanced and confident or serene. Having a specified subject as the most important or focal element'
         ]);
+        
         Attitude::create([
-            'name' => 'clear',
+            'name' => 'Clear',
             'slug' => 'clear',
             'description' => 'easy to perceive, understand, or interpret'
         ]);
+
         Attitude::create([
-            'name' => 'complimentary',
+            'name' => 'Complimentary',
             'slug' => 'complimentary',
             'description' => 'expressing a compliment; praising or approving'
         ]);
+
         Attitude::create([
-            'name' => 'critical',
+            'name' => 'Critical',
             'slug' => 'critical',
             'description' => 'expressing or involving an analysis of the merits and faults of a work or an idea'
         ]);
+
         Attitude::create([
-            'name' => 'dreamy',
+            'name' => 'Chronologic',
+            'slug' => 'chronologic',
+            'description' => ''
+        ]);   
+
+        Attitude::create([
+            'name' => 'Dreamy',
             'slug' => 'dreamy',
             'description' => 'having a magical or pleasantly unreal quality; dreamlike'
         ]);
+        
         Attitude::create([
-            'name' => 'droll',
+            'name' => 'Droll',
             'slug' => 'droll',
             'description' => 'curious or unusual in a way that provokes dry amusement'
         ]);
+        
         Attitude::create([
             'name' => 'earnest',
             'slug' => 'earnest',
             'description' => 'resulting from or showing sincere and intense conviction'
         ]);
+
         Attitude::create([
             'name' => 'ecstatic',
             'slug' => 'ecstatic',
             'description' => 'feeling or expressing overwhelming happiness or joyful excitement'
         ]);
+
         Attitude::create([
             'name' => 'elated',
             'slug' => 'elated',
             'description' => 'someone who is ecstatically happy'
         ]);
+
         Attitude::create([
             'name' => 'encouraging',
             'slug' => 'encouraging',
             'description' => 'giving someone support or confidence; supportive'
         ]);
+
         Attitude::create([
-            'name' => 'energetic',
+            'name' => 'Energetic',
             'slug' => 'energetic',
             'description' => 'showing or involving great activity or vitality'
         ]);
+
         Attitude::create([
-            'name' => 'enthusiastic',
+            'name' => 'Enthusiastic',
             'slug' => 'enthusiastic',
             'description' => 'having or showing intense and eager enjoyment, interest, or approval'
         ]);
+
         Attitude::create([
-            'name' => 'excited',
+            'name' => 'Excited',
             'slug' => 'excited',
             'description' => 'very enthusiastic and eager'
         ]);
+
         Attitude::create([
-            'name' => 'friendly',
+            'name' => 'Friendly',
             'slug' => 'friendly',
             'description' => 'kind and pleasant'
         ]);
+
+        Attitude::create([
+            'name' => 'Focused',
+            'slug' => 'focused',
+            'description' => ''
+        ]);        
+
         Attitude::create([
             'name' => 'judgmental',
             'slug' => 'judgmental',
             'description' => 'having or displaying an overly critical point of view'
+        ]);
+
+        Attitude::create([
+            'name' => 'Logic',
+            'slug' => 'logic',
+            'description' => ''
         ]);
 
         Attitude::create([
@@ -219,20 +266,101 @@ class AttitudeSeeder extends Seeder
             'slug' => 'sincere',
             'description' => 'free from pretence or deceit; proceeding from genuine feelings'
         ]);
+
         Attitude::create([
-            'name' => 'understanding',
+            'name' => 'Understanding',
             'slug' => 'understanding',
             'description' => "sympathetically aware of other people's feelings; tolerant and forgiving"
         ]);
+        
         Attitude::create([
             'name' => 'vibrant',
             'slug' => 'vibrant',
             'description' => 'full of energy and life'
         ]);
+        
         Attitude::create([
             'name' => 'Curious',
             'slug' => 'curious',
             'description' => 'eager to know or learn something'
+        ]);
+
+        Attitude::create([
+            'name' => 'Creative',
+            'slug' => 'creative',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Imaginative',
+            'slug' => 'imaginative',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Visionary',
+            'slug' => 'imaginative',
+            'description' => ''
+        ]);
+        
+        Attitude::create([
+            'name' => 'Rational',
+            'slug' => 'rational',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Determined',
+            'slug' => 'determined',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Empathetic',
+            'slug' => 'empathetic',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Dreamer',
+            'slug' => 'dreamer',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Open minded',
+            'slug' => 'open-minded',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Emotional',
+            'slug' => 'emotional',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Honest',
+            'slug' => 'honest',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Introspective',
+            'slug' => 'introspective',
+            'description' => ''
+        ]);
+
+        Attitude::create([
+            'name' => 'Helpful',
+            'slug' => 'helpful',
+            'description' => ''
+        ]);
+        
+        Attitude::create([
+            'name' => 'Structured',
+            'slug' => 'structured',
+            'description' => ''
         ]);
     }
 }

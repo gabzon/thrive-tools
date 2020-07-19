@@ -23,6 +23,12 @@ class UserSeeder extends Seeder
             ]);
         }
 
+        $henry = User::firstOrCreate([
+            'name'  => 'Henry Castro',
+            'email' =>  'hcnegro@gmail.com',
+            'password'  => Hash::make('password'),
+        ]);
+
         factory(App\User::class, 50)->create();
     }
 }

@@ -21,8 +21,8 @@ class CreateFilesTable extends Migration
             $table->enum('type', ["pdf","example","kit"])->default('pdf');
             $table->enum('lang', ["en","fr","es","pt","it","hr","de","ja","nl","cn","rs"])->default('en');
             $table->string('file');
-            $table->string('image_file')->nullable();            
-            $table->foreignId('tool_id')->nullable()->constrained();
+            $table->string('thumbnail')->nullable();            
+            $table->foreignId('tool_id')->nullable();
             $table->timestamps();
         });
     }

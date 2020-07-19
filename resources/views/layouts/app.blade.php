@@ -50,14 +50,16 @@
             </div>
             <div class="flex-1 bg-indigo-100 ml-64 mt-10">
                 <main class="px-8">
+                    @include('layouts.alert')
                     @yield('content')
                 </main>
+                <br>
+                @include('layouts.footer')
             </div>
         </div>
         @endguest
 
     </div>
-    @include('layouts.footer')
     <livewire:scripts />
     @stack('scripts')
 </body>
