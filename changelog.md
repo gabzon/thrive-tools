@@ -1,5 +1,5 @@
 # Saturday July 18th, 2020:
-- tools can be edited
+* tools can be edited
 * fix footer
 * Download button
 * Filters
